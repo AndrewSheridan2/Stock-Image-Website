@@ -25,9 +25,53 @@ Stock Vehicle Photos
 </nav>
 
 <main>
-<img src="cars_GreenRacecar.jpg" alt="green racecar">
-<img src="cars_old.jpg" alt="vintage car">
-<img src="cars_White.jpg" alt="white car">
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="cars_GreenRacecar.jpg">
+    <<img src="cars_GreenRacecar.jpg" alt="green racecar">
+  </a>
+  <div class="desc">a green racecar</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="cars_old.jpg">
+    <img src="cars_old.jpg" alt="vintage car">
+  </a>
+  <div class="desc">a vintage car</div>
+</div>
+
+<div class="gallery">
+  <a target="cars_White.jpg">
+    <img src="cars_White.jpg" alt="white car">
+  </a>
+  <div class="desc">white car</div>
+</div>
+
+
+
 </main>
 
 </body>

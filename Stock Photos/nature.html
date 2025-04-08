@@ -25,10 +25,50 @@ Stock Nature Photos
 </nav>
 
 <main>
-<img src="nature_Peacock.png" alt="peacock">
-<img src="nature_Daisy.jpg" alt="daisy">
-<img src="nature_Lemon.jpg" alt="lemon">
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
 
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="nature_Peacock.png">
+    <img src="nature_Peacock.png" alt="peacock">
+  </a>
+  <div class="desc">a peacock</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="nature_Daisy.jpg">
+    <img src="nature_Daisy.jpg" alt="daisy">
+  </a>
+  <div class="desc">daisy</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="nature_Lemon.jpg">
+    <img src="nature_Lemon.jpg" alt="lemon">
+  </a>
+  <div class="desc">lemon</div>
+</div>
 </main>
 
 </body>
