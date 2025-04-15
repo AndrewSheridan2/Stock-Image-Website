@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Stock Website</title> 
+  
+  <link rel="stylesheet" href="../project.css">
+</head>
+<header>
+<h1>
+Stock Empourium
+</h1>
+</header>
+
+<body>
+
+<h1>Products</h1>
+<div id="products">
+  <div class="product">
+    <img src="../owl.jpg" alt="owl picture">
+    <p>Owl Picture</p>
+    <p class="price">$10</p>
+    <button onclick="addToCart('Owl Picture', 10)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="../bluecar.jpg" alt="car picture">
+    <p>Car Picture</p>
+    <p class="price">$20</p>
+    <button onclick="addToCart('Car Picture', 10)">Add to Cart</button>
+  </div>
+</div>
+
+<h1>Cart</h1>
+<div id="cart">
+  <ul id="cartItems"></ul>
+  <p id="cartTotal">Total: $0</p>
+</div>
+
+<script>
+let cart = [];
+
+function addToCart(name, price) {
+  cart.push({name: name, price: price});
+  displayCart();
+}
+
+function displayCart() {
+  document.getElementById('cartItems').innerHTML = '';
+  let total = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    const item = cart[i];
+    const li = document.createElement('li');
+    li.textContent = `${item.name} - $${item.price}`;
+    document.getElementById('cartItems').appendChild(li);
+    total += item.price;
+  }
+  document.getElementById('cartTotal').textContent = `Total: $${total}`;
+}
+</script>
+
+</body>
+<footer>
+Andrew Sheridan
+<br>
+<br>
+contact info
+</div>
+</footer>
+
+</html>
